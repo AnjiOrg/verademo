@@ -20,7 +20,21 @@
 		<spring.version>4.3.10.RELEASE</spring.version>
 		<springboot.version>2.3.1.RELEASE</springboot.version>
 		<fileupload.version>1.3.2</fileupload.version>
-	</properties>
+	</properties>	<!-- Dependency Management for transitive dependency overrides -->
+	<dependencyManagement>
+		<dependencies>
+			<!-- Pin commons-httpclient (migrated to org.apache.httpcomponents:httpclient) to safe version -->
+			<!-- Addresses CVE-2012-5783, CVE-2012-6153 -->
+			<!-- The old commons-httpclient:commons-httpclient has been replaced by org.apache.httpcomponents:httpclient -->
+			<!-- Remove when all transitive dependencies bringing in the old library are upgraded -->
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpclient</artifactId>
+				<version>4.5.14</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 
 	<!-- Dependencies begin here -->
 	<dependencies>

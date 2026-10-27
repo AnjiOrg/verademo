@@ -17,7 +17,7 @@ Blab-a-Gag is a fairly simple forum type application which allows:
 * `/blabbers` shows a list of all other users and allows the current user to listen or ignore.
 * `/profile` allows the current user to modify their profile.
 * `/login` allows you to log in to your accountdsd
-* `/register` allows you to create a new user account
+* `/register` allows you to create a new user accountcxc
 * `/tools` shows a tools page that shows a fortune or lets you ping a host.
 
 
